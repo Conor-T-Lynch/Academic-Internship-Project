@@ -1,7 +1,7 @@
 <?php
 //starts the users current session.
 session_start();
-//if the user is not logged in, will redirect the user to the login page.
+//if the users is not logged in, will redirect the user to the login page.
 if (!isset($_SESSION['username'])) {
     header("Location: index.html");
     exit();
