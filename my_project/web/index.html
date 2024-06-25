@@ -1,3 +1,6 @@
+<!--@Reference:“How To Create A OOP PHP Login System For Beginners | OOP PHP & PDO | OOP PHP Tutorial,” www.youtube.com. https://www.youtube.com/watch?v=BaEm2Qv14oU&ab_channel=DaniKrossing (accessed Jul. 22, 2024).-->
+<!--@Reference:“Simple signup and login system with PHP and Mysql database | Full Tutorial | How to & source code,” www.youtube.com. https://www.youtube.com/watch?v=WYufSGgaCZ8&ab_channel=QuickProgramming (accessed Jul. 22, 2024).-->
+<!--w3schools, “How To Create a Login Form,” W3schools.com, 2019. https://www.w3schools.com/howto/howto_css_login_form.asp (accessed Jul. 22, 2024).-->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -13,29 +16,29 @@
 <body>
     <header>
         <div class="container">
-            <!-- Header title -->
-            <h1>Login</h1>
-            <div class="header-buttons">
-                <!-- Link to the registration page -->
-                <a href="register.html" class="btn btn-custom">Register</a>
-            </div>
+            <!-- Logo -->
+            <img src="Logo.png" alt="Mini Math" width="80" height="80"> 
         </div>
     </header>
+<H1 > Login </H1>
+
     <div class="container form-container">
         <!-- Form for user login, submits data to login.php via POST method -->
         <form action="login.php" method="post">
             <div class="form-group">
-                <label for="username">Username</label>
                 <!-- Input field for username -->
-                <input type="text" name="username" id="username" class="form-control" required>
+                <input type="text" name="username" placeholder="Username" id="username" class="form-control" required>
             </div>
             <div class="form-group">
-                <label for="password">Password</label>
                 <!-- Input field for password -->
-                <input type="password" name="password" id="password" class="form-control" required>
+                <input type="password" name="password" placeholder="Password" id="password" class="form-control" required>
             </div>
+
             <!-- Submit button for the login form -->
             <button type="submit" class="btn btn-custom">Login</button>
+
+            <p> dont have an accout? <a href="register.html"> Create an account </a> </p>
+            
         </form>
     </div>
     <!-- jQuery library for JavaScript functionality -->

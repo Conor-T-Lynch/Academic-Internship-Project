@@ -1,3 +1,4 @@
+//@Reference:https://learn.cypress.io/testing-your-first-application/how-to-test-forms-and-custom-cypress-commands (accessed Jul. 22, 2024).
 describe('Login Form Test', () => {
   it('should fill in the login form and submit', () => {
     //Visit the login page

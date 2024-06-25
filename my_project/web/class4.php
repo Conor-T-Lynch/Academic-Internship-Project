@@ -1,9 +1,21 @@
 <?php
+//@Reference:W3Schools, “PHP 5 Sessions,” W3schools.com, 2019. https://www.w3schools.com/php/php_sessions.asp (accessed Jul. 22, 2024).
+//@Reference:“Session in PHP: Creating, Destroying, and Working With Session in PHP,” Simplilearn.com, Apr. 26, 2021. https://www.simplilearn.com/tutorials/php-tutorial/session-in-php#:~:text=To%20set%20session%20variables%2C%20you (accessed Jul. 22, 2024).
+//@Reference:“PHP and JSON,” www.w3schools.com. https://www.w3schools.com/php/php_json.asp (accessed Jul. 22, 2024).
+//@Reference:“Get data from JSON file with PHP,” Stack Overflow. https://stackoverflow.com/questions/19758954/get-data-from-json-file-with-php (accessed Jul. 22, 2024).
 //starts the users current session.
 session_start();
+
 //if the user is not logged in, will redirect the user to the login page.
 if (!isset($_SESSION['username'])) {
     header("Location: index.html");
+    exit();
+}
+
+// Check if the user is subscribed.
+if (!isset($_SESSION['subscribed']) || $_SESSION['subscribed'] != 1) { // Check if subscribed is 1 (true)
+    // If not subscribed, redirect the user to the subscription page.
+    header("Location: subscription.php");
     exit();
 }
 
@@ -22,11 +34,12 @@ if (!isset($_SESSION['current_question'])) {
     //all_correct variable.
     $_SESSION['all_correct'] = true;
     //score variable
-    $_SESSION['score'] = 0;  
+    $_SESSION['score'] = 0;
 }
 
 //initialize feedback message.
 $feedback = "";
+
 //post method to process the form submission from the user.
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     //current_question index.
@@ -35,6 +48,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $userAnswer = $_POST['answer'];
     //get the correct answer from current question.
     $correctAnswer = $questions[$index]['answer'];
+
     //check if users answer is correct.
     if ($userAnswer == $correctAnswer) {
         $feedback = "Correct!";
@@ -47,8 +61,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         $_SESSION['all_correct'] = false;
     }
 
-    //moves on to the next question on the json file.
-    $_SESSION['current_question'] += 1;
+    //moves on to the next question on the json file from class1.
+    $_SESSION['current_question']++;
 
     //checks if all questions have been answered.
     if ($_SESSION['current_question'] >= $_SESSION['total_questions']) {
@@ -112,14 +126,14 @@ $currentQuestion = $questions[$currentQuestionIndex]['question'];
         <div class="content">
             <h2>1st Class Mathematical Questions</h2>
             <div class="score">
-                <!-- Displays the users current score -->
+                <!-- Displays the user's current score -->
                 <p>Current Score: <?php echo $_SESSION['score']; ?> points</p>
             </div>
-            <!-- Displays the final message if all questions have been answered -->
+            <!-- Displays the final message, depending on if all questions have been answered correctly or not -->
             <?php if (isset($final_message)): ?>
                 <div class="alert alert-info"><?php echo $final_message; ?></div>
             <?php else: ?>
-                <!-- Displays feedback message after each answer -->
+                <!-- Displays feedback message after each answer, if it was correct or incorrect -->
                 <?php if ($feedback): ?>
                     <div class="alert alert-info"><?php echo $feedback; ?></div>
                 <?php endif; ?>

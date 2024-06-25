@@ -1,4 +1,6 @@
 <?php
+//@Reference:“Session in PHP: Creating, Destroying, and Working With Session in PHP,” Simplilearn.com, Apr. 26, 2021. https://www.simplilearn.com/tutorials/php-tutorial/session-in-php#:~:text=To%20set%20session%20variables%2C%20you (accessed Jul. 22, 2024).
+//@Reference:“How To Create a Checkout Form with CSS,” www.w3schools.com. https://www.w3schools.com/howto/howto_css_checkout_form.asp (accessed Jul. 22, 2024).
 //starts the session.
 session_start();
 //Checks to see if the 'username' session variable is set.

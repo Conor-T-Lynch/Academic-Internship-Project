@@ -1,8 +1,9 @@
 body {
     font-family: Arial, sans-serif;
-    background-color: #f4f4f4; /* Light grey */
+    background-color: #f4f4f4;
     margin: 0;
     padding: 0;
+    text-align: center;
 }
 
 .container {
@@ -12,14 +13,14 @@ body {
 }
 
 header {
-    background: #ff6961; /* Child-friendly red color */
-    color: #000; /* Black text color */
+    background: #ef463d;
+    color: #000;
     padding-top: 30px;
     min-height: 70px;
-    border-bottom: #d32f2f 3px solid; /* Slightly darker red for border */
     display: flex;
     justify-content: space-between;
     align-items: center;
+    text-align: center;
 }
 
 .header-buttons {
@@ -106,8 +107,8 @@ header {
 
 .sidebar {
     width: 200px;
-    background: #ff6961; /* Child-friendly red color */
-    color: #000; /* Black text color */
+    background: #ff6961;
+    color: #000;
     padding: 15px;
     height: 100vh;
 }
@@ -118,20 +119,20 @@ header {
 }
 
 .sidebar a {
-    color: #000; /* Black text color */
+    color: #000;
     text-decoration: none;
     display: block;
     padding: 10px 0;
 }
 
 .sidebar a:hover {
-    background: #d32f2f; /* Slightly darker red for hover */
+    background: #d32f2f;
 }
 
 .content {
     flex: 1;
     padding: 20px;
-    background-color: #007bff; /* Child-friendly blue color */
+    background-color: #007bff;
 }
 
 .content .form-group label {

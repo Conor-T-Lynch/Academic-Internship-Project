@@ -1,4 +1,5 @@
 <?php
+//@Reference:“Session in PHP: Creating, Destroying, and Working With Session in PHP,” Simplilearn.com, Apr. 26, 2021. https://www.simplilearn.com/tutorials/php-tutorial/session-in-php#:~:text=To%20set%20session%20variables%2C%20you (accessed Jul. 22, 2024).
 //starts the users current session.
 session_start();
 //if the user is not logged in, will redirect the user to the login page.
