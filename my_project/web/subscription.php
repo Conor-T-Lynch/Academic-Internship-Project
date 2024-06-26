@@ -23,20 +23,26 @@ if (!isset($_SESSION['username'])) {
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-    <header>
-        <div class="container">
-            <!-- Header title -->
-            <h1>Subscribe to Our Website</h1>
-            <div class="header-buttons">
+
+<header>
+    <!-- Logo -->
+    <img src="Logo.png" alt="Mini Math" width="80" height="80"> 
+            
+    <div class="header-buttons">
                 <!-- Button to go back to the welcome page -->
-                <a href="welcome.php" class="btn btn-custom" style="margin-left: 10px;">Back to Welcome Page</a>
+                <a href="welcome.php" class="btn btn-custom" style="margin-left: 10px;">Home Page</a>
+                </div>
+
+        <h1>Subscribe to Our Website</h1>
+
+        <div class="header-buttons">
                 <!-- Logout button form -->
-                <form action="logout.php" method="post" style="display: inline; margin-left: 30px;">
+                <form action="logout.php" method="post">
                     <button type="submit" class="btn btn-custom">Logout</button>
                 </form>
-            </div>
         </div>
     </header>
+
     <div class="container">
         <div class="form-container">
             <!-- Subscription form with POST method to process_subscription.php -->

@@ -12,19 +12,16 @@
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-    <header>
-        <div class="container">
-            <!-- Header title -->
-            <h1>Register</h1>
-            <div class="header-buttons">
-                <!-- Form with a button to redirect to the login page (index.html) -->
-                <form action="index.html">
-                    <!-- Login button -->
-                    <button type="submit" class="btn btn-custom">Login</button>
-                </form>
+        <header>
+            <div class="container">
+                <!-- Logo -->
+                <img src="Logo.png" alt="Mini Math" width="80" height="80"> 
             </div>
-        </div>
-    </header>
+        </header>
+
+
+            <h1>Register</h1>
+
     <div class="container form-container">
         <!-- Registration form that submits data to register.php via POST method -->
         <form id="register-form" action="register.php" method="post">
@@ -49,7 +46,8 @@
                 <input type="password" name="confirm_password" id="confirm_password" class="form-control" required>
             </div>
             <!-- Submit button for the registration form -->
-            <button type="submit" class="btn btn-primary">Register</button>
+            <button type="submit" class="btn btn-custom">Register</button>
+            <p> already have an account? <a href="index.html"> Login </a> </p>
         </form>
     </div>
 </body>

@@ -1,6 +1,6 @@
 body {
     font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
+    background-color: #23d52b;
     margin: 0;
     padding: 0;
     text-align: center;
@@ -13,7 +13,7 @@ body {
 }
 
 header {
-    background: #ef463d;
+    background: #ff8000;
     color: #000;
     padding-top: 30px;
     min-height: 70px;
@@ -33,9 +33,9 @@ header {
 }
 
 .header-buttons .btn-custom {
-    background-color: #007bff;
-    border-color: #007bff;
-    color: white;
+    background-color: #ffff00;
+    border-color: #ffff00;
+    color: black;
     padding: 10px;
     border-radius: 5px;
     font-size: 16px;
@@ -43,8 +43,8 @@ header {
 }
 
 .header-buttons .btn-custom:hover {
-    background-color: #0056b3;
-    border-color: #0056b3;
+    background-color: #ffff00;
+    border-color: #ffff00;
 }
 
 .form-container {
@@ -81,15 +81,15 @@ header {
     max-width: 300px;
     padding: 10px;
     border-radius: 5px;
-    border: 1px solid #ccc;
+    border: 1px solid #007bff;
     font-size: 16px;
     box-sizing: border-box;
 }
 
 .form-container button {
-    background-color: #007bff;
-    border-color: #007bff;
-    color: white;
+    background-color: #ffff00;
+    border-color: #ffff00;
+    color: black;
     padding: 10px;
     border-radius: 5px;
     font-size: 16px;
@@ -97,8 +97,8 @@ header {
 }
 
 .form-container button:hover {
-    background-color: #0056b3;
-    border-color: #0056b3;
+    background-color: #ffff00;
+    border-color: #ffff00;
 }
 
 .wrapper {
@@ -107,7 +107,7 @@ header {
 
 .sidebar {
     width: 200px;
-    background: #ff6961;
+    background: #ff0d00;
     color: #000;
     padding: 15px;
     height: 100vh;
@@ -126,7 +126,7 @@ header {
 }
 
 .sidebar a:hover {
-    background: #d32f2f;
+    background: #ff0d00;
 }
 
 .content {

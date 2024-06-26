@@ -12,9 +12,9 @@ if (!isset($_SESSION['username'])) {
     exit();
 }
 
-// Check if the user is subscribed.
+//Check if the user is subscribed.
 if (!isset($_SESSION['subscribed']) || $_SESSION['subscribed'] != 1) { // Check if subscribed is 1 (true)
-    // If not subscribed, redirect the user to the subscription page.
+    //If not subscribed, redirect the user to the subscription page.
     header("Location: subscription.php");
     exit();
 }
@@ -94,21 +94,22 @@ $currentQuestion = $questions[$currentQuestionIndex]['question'];
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
     <!-- Link to the CSS file for styling -->
     <link rel="stylesheet" href="css/styles.css">
-    <title>1st Class Questions</title>
+    <title>5th Class Mathematical Questions</title>
 </head>
 <body>
-    <header>
+<header>
+    <!-- Logo -->
+    <img src="Logo.png" alt="Mini Math" width="80" height="80"> 
+                
         <div class="container">
-            <!-- Displays a welcome message with the user's username -->
             <h1>Welcome, <?php echo htmlspecialchars($_SESSION['username']); ?></h1>
-            <div class="header-buttons">
-                <!-- Button to go back to the subscription page -->
-                <a href="subscription.php" class="btn btn-custom" style="margin-left: 10px;">Subscribe</a>
+        </div>
+
+        <div class="header-buttons">
                 <!-- Logout button form -->
-                <form action="logout.php" method="post" style="margin-left: 30px;">
+                <form action="logout.php" method="post">
                     <button type="submit" class="btn btn-custom">Logout</button>
                 </form>
-            </div>
         </div>
     </header>
     <div class="wrapper">
@@ -124,7 +125,7 @@ $currentQuestion = $questions[$currentQuestionIndex]['question'];
             <a href="class6.php">6th Class</a>
         </div>
         <div class="content">
-            <h2>1st Class Mathematical Questions</h2>
+            <h2>5th Class Mathematical Questions</h2>
             <div class="score">
                 <!-- Displays the user's current score -->
                 <p>Current Score: <?php echo $_SESSION['score']; ?> points</p>
@@ -138,10 +139,10 @@ $currentQuestion = $questions[$currentQuestionIndex]['question'];
                     <div class="alert alert-info"><?php echo $feedback; ?></div>
                 <?php endif; ?>
                 <!-- Form to submit the answer for the current question -->
-                <form method="post" action="class1.php">
+                <form method="post" action="class5.php">
                     <div class="form-group">
                         <label for="answer"><?php echo $currentQuestion; ?></label>
-                        <input type="text" name="answer" id="answer" class="form-control smaller-input" required>
+                        <input type="text" name="answer" id="answer" class="form-group" required>
                     </div>
                     <button type="submit" class="btn btn-custom">Submit Answer</button>
                 </form>

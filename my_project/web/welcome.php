@@ -17,22 +17,30 @@ if (!isset($_SESSION['username'])) {
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
     <!-- Link to custom CSS for styling -->
     <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/welcome.css">
     <title>Welcome</title>
 </head>
 <body>
     <header>
+    <!-- Logo -->
+    <img src="Logo.png" alt="Mini Math" width="80" height="80"> 
+                
         <div class="container">
             <h1>Welcome, <?php echo htmlspecialchars($_SESSION['username']); ?></h1>
-            <div class="header-buttons">
+        </div>
+
+        <div class="header-buttons">
                 <!-- Logout button form -->
                 <form action="logout.php" method="post">
                     <button type="submit" class="btn btn-custom">Logout</button>
                 </form>
-            </div>
         </div>
     </header>
+    
     <div class="wrapper">
+       
         <div class="sidebar">
+            
             <!-- Sidebar title -->
             <h2>Classes</h2>
              <!-- Navigation links for different classes -->
@@ -45,7 +53,7 @@ if (!isset($_SESSION['username'])) {
         </div>
         <div class="content">
              <!-- Welcome message to the user -->
-            <h2>Welcome to the Educational Platform</h2>
+            <h2>Welcome to the MiniMath Educational Platform</h2>
              <!-- informing the user on how to navigate the class links -->
             <p>Select a class from the sidebar to view the questions.</p>
             <p><a href="subscription.php" class="btn btn-primary">Subscribe Now</a></p>
