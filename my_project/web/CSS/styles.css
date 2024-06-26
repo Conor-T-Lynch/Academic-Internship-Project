@@ -1,0 +1,160 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #23d52b;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+.container {
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+}
+
+header {
+    background: #ff8000;
+    color: #000;
+    padding-top: 30px;
+    min-height: 70px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+}
+
+.header-buttons {
+    display: flex;
+    align-items: center;
+}
+
+.header-buttons form {
+    margin: 0;
+}
+
+.header-buttons .btn-custom {
+    background-color: #ffff00;
+    border-color: #ffff00;
+    color: black;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.header-buttons .btn-custom:hover {
+    background-color: #ffff00;
+    border-color: #ffff00;
+}
+
+.form-container {
+    width: 80%;
+    margin: auto;
+    margin-top: 50px;
+    max-width: 400px;
+}
+
+.form-container form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.form-container .form-group {
+    margin-bottom: 20px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.form-container label {
+    margin-bottom: 5px;
+    display: inline-block;
+    width: 100px;
+}
+
+.form-container input[type="text"],
+.form-container input[type="password"],
+.form-container input[type="email"] {
+    width: 100%;
+    max-width: 300px;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #007bff;
+    font-size: 16px;
+    box-sizing: border-box;
+}
+
+.form-container button {
+    background-color: #ffff00;
+    border-color: #ffff00;
+    color: black;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.form-container button:hover {
+    background-color: #ffff00;
+    border-color: #ffff00;
+}
+
+.wrapper {
+    display: flex;
+}
+
+.sidebar {
+    width: 200px;
+    background: #ff0d00;
+    color: #000;
+    padding: 15px;
+    height: 100vh;
+}
+
+.sidebar h2 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.sidebar a {
+    color: #000;
+    text-decoration: none;
+    display: block;
+    padding: 10px 0;
+}
+
+.sidebar a:hover {
+    background: #ff0d00;
+}
+
+.content {
+    flex: 1;
+    padding: 20px;
+    background-color: #007bff;
+}
+
+.content .form-group label {
+    width: auto;
+    margin-right: 10px;
+}
+
+.content .form-group {
+    flex-direction: row;
+}
+
+.alert {
+    margin-top: 20px;
+}
+
+.smaller-input {
+    width: 25%;
+    max-width: 150px;
+}
+
+.score {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
