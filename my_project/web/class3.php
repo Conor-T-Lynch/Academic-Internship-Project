@@ -13,7 +13,7 @@ if (!isset($_SESSION['username'])) {
 }
 
 //Check if the user is subscribed.
-if (!isset($_SESSION['subscribed']) || $_SESSION['subscribed'] != 1) { // Check if subscribed is 1 (true)
+if (!isset($_SESSION['subscribed']) || $_SESSION['subscribed'] != 1) {
     //If not subscribed, redirect the user to the subscription page.
     header("Location: subscription.php");
     exit();
